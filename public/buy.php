@@ -1,23 +1,23 @@
 <?php
-    $uid = $_GET["user_id"];
-    $pid = $_GET["product_id"];
+    $uid = $_GET["userid"];
+    $pid = $_GET["productid"];
 
     // vai no banco de dados, verifica se existe o produto e se QTD > 0
 
 // Cobra do usuario usando Stripe (VITAO)
 
 // Cria uma compra pro usuario rola
-    $product = CS50 :: query ("SELECT * FROM T_PRODUTO WHERE id = ?", $pid);
-    $rows = CS50::query("SELECT * FROM T_PRODUTO WHERE id = ?", $pid);
+    $product = CS50 :: query ("SELECT * FROM product WHERE id = ?", $pid);
+    $rows = CS50::query("SELECT * FROM product WHERE id = ?", $pid);
     
     if (count($rows) == 0)
     {
         apologize("Could not find the product");
     }
     
-    $check_rows = $rows["estoque"]
+    $check_rows = $rows["amount"]
     
-    if($check_rows <= 0)
+    if ($check_rows <= 0)
     {
         apologize("There is no sufficient quantity");
     }

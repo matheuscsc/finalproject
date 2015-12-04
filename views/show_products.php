@@ -4,7 +4,7 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Size</th>
+            <!-- <th>Size</th>-->
             <th>Price</th>
         </tr>
     </thead>
@@ -15,7 +15,7 @@
 
             <tr>
                 <td><?= $product["name"] ?></td>
-                <td><?= $product["size"] ?></td>
+                <!-- <td><?= $product["size"] ?></td>-->
                 <td><?= $product["price"] ?></td>
             </tr>
 
