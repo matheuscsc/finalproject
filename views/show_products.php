@@ -1,4 +1,4 @@
-<h1><?php echo("Meu nome é " . $name); ?></h1>
+<h1><?php //echo("Meu nome é " . $name); ?></h1>
 <table class="table table-striped">
 
     <thead>

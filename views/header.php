@@ -31,16 +31,12 @@
 
             <div id="top">
                 <div>
-                    <a href="/"><img alt="Harvard Model Uniter Nations Store" src="/img/logo.png"/></a>
+                    <a href="/"><img alt="Harvard Model Uniter Nations Store" src="/img/hmunlogo.png"/></a>
                 </div>
                 <?php if (!empty($_SESSION["id"])): ?>
                     <ul class="nav nav-pills">
-                        <li><a href="quote.php">Quote</a></li>
-                        <li><a href="buy.php">Buy</a></li>
-                        <li><a href="sell.php">Sell</a></li>
-                        <li><a href="history.php">History</a></li>
-                        <li><a href="addmoney.php">Add Money</a></li>
                         <li><a href="logout.php"><strong>Log Out</strong></a></li>
+                          <li><a href="cart.php"><strong>Cart</strong></a></li>
                     </ul>
                 <?php endif ?>
             </div>

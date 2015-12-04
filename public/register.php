@@ -18,6 +18,10 @@
         {
             apologize("You must provide your username!");
         }
+        else if ($_POST["email"] == NULL)
+        {
+            apologize("You must provide your email.");
+        }
         else if ($_POST["password"] == NULL)
         {
             apologize("You must provide your password.");
@@ -32,7 +36,7 @@
             apologize("Your password and confirmation must be equal");
         }
         // use the query function and then check if the username already exists.
-        $result = CS50::query("INSERT IGNORE INTO users (username, hash, cash) VALUES(?, ?, 10000.0000)", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT));
+        $result = CS50::query("INSERT IGNORE INTO users (username, email, password) VALUES(?, ?, ?)", $_POST["username"], $_POST["email"], password_hash($_POST["password"], PASSWORD_DEFAULT));
         if ($result == false)
         {
             apologize("Insert failed!");
