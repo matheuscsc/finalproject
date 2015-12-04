@@ -3,8 +3,7 @@
     require("../includes/config.php"); 
     
     /* Database query for the products */ 
-    $CS50.query == "SELECT * FROM products";
-    $products = mysql_query($query);
+    $products = CS50::query("SELECT * FROM products");
     
     // Check if products exist 
     if (!$products) 
