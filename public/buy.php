@@ -6,6 +6,6 @@ $pid = $_GET["product_id"];
 
 // Cobra do usuario usando Stripe (VITAO)
 
-// Cria uma compra pro usuario
+// Cria uma compra pro usuario rola
 
 ?>
